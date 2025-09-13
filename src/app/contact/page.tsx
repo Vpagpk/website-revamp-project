@@ -39,8 +39,8 @@ const faqs = [
     answer: "Absolutely! We can tailor our performances to match your event theme, duration requirements, and cultural preferences. We work closely with clients to create memorable experiences."
   },
   {
-    question: "What is your pricing structure?",
-    answer: "Our pricing varies based on performance type, duration, number of artists, and location. Contact us for a detailed quote tailored to your specific requirements and budget."
+    question: "How do I get a quote?",
+    answer: "We provide custom quotes after a short consultation to understand your event details (performance type, duration, number of artists, and location). Please contact us and we'll tailor a proposal for you."
   },
   {
     question: "Do you offer dance training classes?",

@@ -13,7 +13,6 @@ const navItems = [
   { href: "/footers", label: "Footers" },
   { href: "/hero", label: "Hero" },
   { href: "/navbars", label: "Navbars" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/stats", label: "Stats" },
   { href: "/team", label: "Team" },
   { href: "/testimonial", label: "Testimonials" },
@@ -53,4 +52,4 @@ export function Navigation() {
       </div>
     </nav>
   );
-} 
+}

@@ -15,11 +15,10 @@ const services = [
     icon: "🌀",
     features: [
       "Traditional Sufi whirling ceremonies",
-      "Spiritual music and chanting",
+      "Spiritual music and chanting", 
       "Authentic period costumes",
       "Solo or group performances"
     ],
-    pricing: "Starting from PKR 50,000",
     duration: "30-60 minutes",
     capacity: "1-8 performers"
   },
@@ -33,8 +32,7 @@ const services = [
       "Live traditional music ensemble",
       "Interactive cultural experience"
     ],
-    pricing: "Starting from PKR 80,000",
-    duration: "45-90 minutes", 
+    duration: "45-90 minutes",
     capacity: "5-15 performers"
   },
   {
@@ -47,7 +45,6 @@ const services = [
       "Corporate team building workshops",
       "Cultural dance certification programs"
     ],
-    pricing: "PKR 3,000 per session",
     duration: "1-2 hours per session",
     capacity: "1-20 students"
   },
@@ -61,46 +58,8 @@ const services = [
       "Reception cultural shows",
       "Custom choreography for families"
     ],
-    pricing: "Contact for custom quote",
     duration: "2-4 hours",
     capacity: "3-12 performers"
-  }
-];
-
-const servicePackages = [
-  {
-    name: "Bronze Package",
-    price: "PKR 35,000",
-    features: [
-      "Single performer",
-      "30-minute performance",
-      "Basic costume included",
-      "Background music"
-    ]
-  },
-  {
-    name: "Silver Package", 
-    price: "PKR 65,000",
-    features: [
-      "3-4 performers",
-      "45-minute performance",
-      "Premium costumes included",
-      "Live musicians",
-      "Sound system provided"
-    ],
-    popular: true
-  },
-  {
-    name: "Gold Package",
-    price: "PKR 120,000", 
-    features: [
-      "6-8 performers",
-      "60-90 minute performance",
-      "Luxury costumes & props",
-      "Full music ensemble",
-      "Professional lighting",
-      "Photography coordination"
-    ]
   }
 ];
 
@@ -114,7 +73,7 @@ const testimonials = [
     image: "/api/placeholder/80/80"
   },
   {
-    name: "Fatima Khan", 
+    name: "Fatima Khan",
     title: "Wedding Planner",
     company: "Royal Celebrations",
     rating: 5,
@@ -123,7 +82,7 @@ const testimonials = [
   },
   {
     name: "Dr. Sarah Ali",
-    title: "Cultural Director", 
+    title: "Cultural Director",
     company: "Arts Council Pakistan",
     rating: 5,
     comment: "The training workshops exceeded our expectations. V.PAG's expertise in traditional dance forms is unmatched in the region.",
@@ -138,9 +97,9 @@ const bookingSteps = [
     description: "Contact us to discuss your event requirements, preferred date, and performance style."
   },
   {
-    step: 2, 
+    step: 2,
     title: "Custom Proposal",
-    description: "We'll create a tailored proposal with performer details, timeline, and transparent pricing."
+    description: "We'll create a tailored proposal with performer details and timeline, then provide a custom quote."
   },
   {
     step: 3,
@@ -149,7 +108,7 @@ const bookingSteps = [
   },
   {
     step: 4,
-    title: "Performance Delivery", 
+    title: "Performance Delivery",
     description: "Our team arrives prepared with all costumes, equipment, and delivers an exceptional show."
   }
 ];
@@ -212,7 +171,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-4 mb-0">
                     <div className="flex items-center gap-8 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-primary" />
@@ -223,11 +182,9 @@ export default function ServicesPage() {
                         <span>{service.capacity}</span>
                       </div>
                     </div>
-                    
-                    <div className="text-xl font-bold text-primary">{service.pricing}</div>
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 mt-6">
                     <h4 className="font-semibold text-foreground">What's Included:</h4>
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
@@ -238,48 +195,7 @@ export default function ServicesPage() {
                   </div>
 
                   <Button className="w-full mt-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
-                    Get Quote for {service.title}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Packages */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Performance Packages</h2>
-            <p className="text-lg text-secondary max-w-2xl mx-auto">
-              Choose from our carefully crafted packages designed to meet different event scales and budgets.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {servicePackages.map((pkg, index) => (
-              <Card key={index} className={`bg-card border-border transition-all duration-300 transform hover:scale-105 ${pkg.popular ? 'ring-2 ring-primary shadow-2xl' : ''}`}>
-                <CardContent className="p-8 text-center">
-                  {pkg.popular && (
-                    <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
-                    </div>
-                  )}
-                  <h3 className="text-2xl font-bold text-primary mb-2">{pkg.name}</h3>
-                  <div className="text-3xl font-bold text-foreground mb-6">{pkg.price}</div>
-                  
-                  <div className="space-y-4 mb-8">
-                    {pkg.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-supporting">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Button className={`w-full ${pkg.popular ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-card border border-primary text-primary hover:bg-primary/10'} transition-all duration-300`}>
-                    Choose {pkg.name}
+                    Request Quote for {service.title}
                   </Button>
                 </CardContent>
               </Card>

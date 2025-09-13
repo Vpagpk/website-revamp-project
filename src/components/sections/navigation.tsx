@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
 
@@ -30,21 +29,14 @@ export default function Navigation() {
     <header className="fixed top-0 z-50 w-full glass-effect border-b border-zinc-800/50">
       <div className="container">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 group" aria-label="V.PAG Dance Company - Home">
-            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 p-2 transition-transform duration-300 group-hover:scale-105">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/icons/58b4bb01-c2d0-4518-83f4-27787f2cdbd6-1.png"
-                alt="V.PAG Dance Company Logo"
-                width={32}
-                height={32}
-                className="h-8 w-8 object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center space-x-3 group" aria-label="VPAG Dance - Home">
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">V.PAG</h1>
-              <p className="text-xs font-medium text-zinc-400 tracking-wide">VERSATILE PERFORMING ART GROUP</p>
+              <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
+                VPAG DANCE
+              </span>
+              <p className="text-xs font-semibold text-zinc-400 tracking-widest">CULTURAL PERFORMANCE ARTS</p>
             </div>
+            <span className="sm:hidden text-xl font-extrabold tracking-tight">VPAG</span>
           </Link>
 
           <nav className="hidden items-center space-x-1 md:flex" role="navigation" aria-label="Main navigation">
