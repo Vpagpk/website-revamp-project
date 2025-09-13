@@ -9,27 +9,33 @@ import FaqSection from '@/components/sections/faq-section';
 import LocationSection from '@/components/sections/location-section';
 import CtaSection from '@/components/sections/cta-section';
 import Footer from '@/components/sections/footer';
+import { BackToTop } from '@/components/ui/back-to-top';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main id="content" className="min-h-screen">
+      {/* Skip to content link for accessibility */}
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only fixed left-3 top-3 z-[100] rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-white"
+      >
+        Skip to main content
+      </a>
       <Navigation />
       <HeroSection />
-      <div className="py-24">
+      {/* Consistent vertical rhythm across sections */}
+      <div className="flex flex-col space-y-24 md:space-y-32">
         <AboutSection />
-      </div>
-      <PerformancesSection />
-      <ServicesSection />
-      <div className="py-24">
+        <PerformancesSection />
+        <ServicesSection />
         <BrandsSection />
-      </div>
-      <TestimonialsSection />
-      <FaqSection />
-      <div className="py-24">
+        <TestimonialsSection />
+        <FaqSection />
         <LocationSection />
       </div>
       <CtaSection />
       <Footer />
+      <BackToTop />
     </main>
   );
 }

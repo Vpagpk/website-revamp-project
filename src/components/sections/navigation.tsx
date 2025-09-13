@@ -79,7 +79,9 @@ export default function Navigation() {
           <button
             className="relative p-2 md:hidden hover:bg-zinc-800/50 rounded-lg transition-colors"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Open mobile menu"
+            aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             <div className="flex h-5 w-6 flex-col justify-between">
               <span className={cn('block h-0.5 w-full rounded-sm bg-zinc-300 transition-all duration-300', isOpen && 'translate-y-[9px] rotate-45')}></span>
