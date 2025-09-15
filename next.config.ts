@@ -1,7 +1,4 @@
 import type { NextConfig } from "next";
-import path from "node:path";
-
-const LOADER = path.resolve(__dirname, 'src/visual-edits/component-tagger-loader.js');
 
 const nextConfig: NextConfig = {
   images: {
@@ -16,17 +13,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
-  // Turbopack rules disabled on Replit due to filesystem compatibility
-  // turbopack: {
-  //   rules: {
-  //     "*.{jsx,tsx}": {
-  //       loaders: [LOADER]
-  //     }
-  //   }
-  // },
-  // Configure for Replit environment
-  // Allow all hosts for proxy compatibility
+  // Configure for Replit environment - allow all hosts for proxy compatibility
   async headers() {
     return [
       {
