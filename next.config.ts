@@ -27,6 +27,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Allow all hosts for Replit proxy environment
+  experimental: {
+    allowedRevalidateHeaderKeys: ['*'],
+  },
+  // Allow dev origins for Replit proxy compatibility
+  allowedDevOrigins: [
+    '*.replit.dev',
+    '*.repl.co',
+    '*.kirk.replit.dev',
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
+    ...(process.env.REPLIT_DEV_DOMAIN ? [process.env.REPLIT_DEV_DOMAIN] : []),
+  ],
 };
 
 export default nextConfig;

@@ -15,10 +15,10 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Next.js Development Server"
+args = "Frontend"
 
 [[workflows.workflow]]
-name = "Next.js Development Server"
+name = "Frontend"
 author = "agent"
 
 [[workflows.workflow.tasks]]
@@ -34,10 +34,10 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 43923
+localPort = 40307
 externalPort = 3000
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["npm", "start"]
+run = ["npm", "run", "start"]
 build = ["npm", "run", "build"]
