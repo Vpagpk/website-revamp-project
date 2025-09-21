@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/sections/navigation";
 import PerformancesSection from "@/components/sections/performances-section";
 import Footer from "@/components/sections/footer";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Play, Filter, Star, Award, Users, Calendar, MapPin, Phone, Mail } from 'lucide-react';
 
 const categories = [
@@ -204,10 +205,14 @@ export default function GalleryPage() {
             {filteredPhotos.map((photo) => (
               <Card key={photo.id} className="group cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-300">
                 <div className="relative overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={photo.src}
                     alt={photo.title}
+                    width={500}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    aspectRatio="card"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
@@ -240,10 +245,14 @@ export default function GalleryPage() {
             {filteredVideos.map((video) => (
               <Card key={video.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img
+                  <OptimizedImage
                     src={video.thumbnail}
                     alt={video.title}
+                    width={500}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    aspectRatio="card"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
@@ -283,10 +292,14 @@ export default function GalleryPage() {
             {behindTheScenes.map((item) => (
               <Card key={item.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img
+                  <OptimizedImage
                     src={item.src}
                     alt={item.title}
+                    width={400}
+                    height={300}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    aspectRatio="card"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>

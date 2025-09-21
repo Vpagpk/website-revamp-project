@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import Link from 'next/link';
 
 const features = [
@@ -60,12 +60,14 @@ const AboutSection = () => {
             
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-amber-400/20 to-orange-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Image
+              <OptimizedImage
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/about-image-B8DwQPlU-2.jpg"
                 alt="V.PAG Dance Company master performing traditional Pakistani classical Kathak dance in ornate cultural costume with precise hand gestures and expressions showcasing years of artistic training"
                 width={600}
                 height={400}
                 className="relative w-full h-80 lg:h-[500px] object-cover rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-105"
+                aspectRatio="card"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
             </div>

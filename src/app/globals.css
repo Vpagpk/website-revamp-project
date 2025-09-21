@@ -449,3 +449,53 @@
 nextjs-portal {
   display: none !important;
 }
+
+/* Loading animations for Phase 1 optimization */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.bg-size-200 {
+  background-size: 200% 100%;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.1;
+  }
+  
+  .text-6xl {
+    font-size: 2.5rem !important;
+  }
+  
+  .text-7xl {
+    font-size: 3rem !important;
+  }
+  
+  .text-8xl {
+    font-size: 3.5rem !important;
+  }
+  
+  /* Ensure minimum touch targets */
+  .btn, button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve mobile spacing */
+  .space-y-24 > * + * {
+    margin-top: 4rem !important;
+  }
+  
+  .space-y-32 > * + * {
+    margin-top: 5rem !important;
+  }
+}
