@@ -3,18 +3,16 @@
 ## Overview
 A production-ready Next.js 15 application with PostgreSQL database, optimized for minimal setup time and credit usage on Replit. This template is designed for instant deployment and efficient development.
 
-## ⚡ Quick Setup (2 Credits or Less)
-**For New Imports:**
-```bash
-# One-command setup
-./setup.sh
-```
+## ⚡ Quick Setup (Minimal Credits)
+**Automatic Setup:**
+Just click the "Run" button - setup runs automatically before starting the dev server.
 
 **Manual Setup (if needed):**
 ```bash
-npm install
-npm run db:push --force
-npm run dev
+./setup.sh              # Run setup manually
+npm install             # Install dependencies  
+npm run db:push:force   # Update database (if DATABASE_URL exists)
+npm run dev             # Start development
 ```
 
 ## 🎯 Optimizations for Replit
@@ -48,7 +46,7 @@ npm run dev
 npm run dev                    # http://localhost:5000
 
 # Database operations
-npm run db:push --force       # Update schema
+npm run db:push:force        # Update schema (forced)
 npm run db:studio            # Database GUI
 
 # Production
@@ -67,18 +65,18 @@ npm run build && npm start
 └── package.json         # All scripts pre-configured
 ```
 
-## 💡 Credit Optimization Tips
-**For Next Import:**
-1. Run `./setup.sh` (saves ~15 credits vs manual setup)
-2. Use existing database schema (no recreation needed)
-3. All workflows pre-configured (instant start)
-4. Dependencies locked and optimized
+## 💡 Credit Optimization Features
+**Automatic Optimizations:**
+1. **Smart Database Setup**: Only runs if DATABASE_URL exists (saves credits)
+2. **Idempotent Installation**: Skips npm install if dependencies exist
+3. **Auto-Run Integration**: Click "Run" button for complete setup
+4. **Error Resilience**: Continues even if database setup fails
 
 **Template Benefits:**
-- Zero exploration credits needed
-- Instant database setup
+- Minimal exploration needed (pre-configured)
+- Conditional database setup (credit-conscious)
 - Pre-configured for Replit proxy  
-- Ready for immediate development
+- Instant development after import
 
 ## 🚀 Production Ready
 - ✅ Database schema configured
