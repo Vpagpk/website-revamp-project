@@ -14,50 +14,83 @@ import { ScrollProgress } from '@/components/ui/scroll-progress';
 
 export default function HomePage() {
   return (
-    <main id="content" className="min-h-screen">
+    <main id="content" className="min-h-screen overflow-x-hidden">
       <ScrollProgress />
-      {/* Skip to content link for accessibility */}
+      
+      {/* Enhanced accessibility link with premium styling */}
       <a
         href="#content"
-        className="sr-only focus:not-sr-only fixed left-3 top-3 z-[100] rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-white"
+        className="sr-only focus:not-sr-only fixed left-4 top-4 z-[100] rounded-xl border border-amber-400/30 bg-gradient-to-r from-zinc-900/90 to-zinc-800/90 px-4 py-3 text-amber-400 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/50 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-zinc-900"
       >
         Skip to main content
       </a>
-      <Navigation />
-      <HeroSection />
       
-      {/* Restructured content sections - Combined related sections for better UX */}
-      <div className="flex flex-col space-y-16 md:space-y-24">
-        {/* About & Services Combined Section */}
-        <section className="space-y-16 md:space-y-20">
-          <AboutSection />
-          <div className="border-t border-zinc-800 pt-16 md:pt-20">
-            <ServicesSection />
-          </div>
-        </section>
-        
-        {/* Portfolio & Testimonials Combined Section */}
-        <section className="space-y-16 md:space-y-20">
-          <PerformancesSection />
-          <div className="border-t border-zinc-800 pt-16 md:pt-20">
-            <TestimonialsSection />
-          </div>
-        </section>
-        
-        {/* Trust & Support Combined Section */}
-        <section className="space-y-16 md:space-y-20">
-          <BrandsSection />
-          <div className="border-t border-zinc-800 pt-16 md:pt-20">
-            <FaqSection />
-          </div>
-        </section>
-        
-        {/* Contact Section */}
-        <LocationSection />
+      {/* Premium header with glass morphism effect */}
+      <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-zinc-950/80 border-b border-zinc-800/50">
+        <Navigation />
       </div>
       
-      <CtaSection />
-      <Footer />
+      {/* Enhanced hero section with premium background */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-cyan-500/5" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(251,191,36,0.1),transparent_60%)]" />
+        <HeroSection />
+      </div>
+      
+      {/* Premium content sections with enhanced styling */}
+      <div className="relative flex flex-col space-y-24 md:space-y-32">
+        {/* About & Services Premium Section */}
+        <section className="relative space-y-24 md:space-y-32">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-900/50 to-transparent" />
+          <div className="relative">
+            <AboutSection />
+            <div className="border-t border-zinc-800/30 pt-24 md:pt-32">
+              <ServicesSection />
+            </div>
+          </div>
+        </section>
+        
+        {/* Portfolio & Testimonials Premium Section */}
+        <section className="relative space-y-24 md:space-y-32">
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/30 via-transparent to-zinc-900/30" />
+          <div className="relative">
+            <PerformancesSection />
+            <div className="border-t border-zinc-800/30 pt-24 md:pt-32">
+              <TestimonialsSection />
+            </div>
+          </div>
+        </section>
+        
+        {/* Trust & Support Premium Section */}
+        <section className="relative space-y-24 md:space-y-32">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-900/40 to-transparent" />
+          <div className="relative">
+            <BrandsSection />
+            <div className="border-t border-zinc-800/30 pt-24 md:pt-32">
+              <FaqSection />
+            </div>
+          </div>
+        </section>
+        
+        {/* Contact Premium Section */}
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 to-transparent" />
+          <LocationSection />
+        </div>
+      </div>
+      
+      {/* Premium CTA section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-cyan-500/10" />
+        <CtaSection />
+      </div>
+      
+      {/* Premium footer */}
+      <div className="relative border-t border-zinc-800/50">
+        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent" />
+        <Footer />
+      </div>
+      
       <BackToTop />
     </main>
   );
