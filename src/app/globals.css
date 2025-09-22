@@ -243,6 +243,10 @@
   transition: all 0.3s ease-out;
 }
 
+.hover-lift {
+  will-change: transform;
+}
+
 .hover-lift:hover {
   transition: transform 0.3s ease-out;
 }
@@ -466,6 +470,10 @@
     transition: all 0.2s ease-in-out;
   }
 
+  .card {
+    will-change: transform, box-shadow;
+  }
+  
   .card:hover {
     border-color: var(--color-accent-primary);
     box-shadow: var(--shadow-lg);
