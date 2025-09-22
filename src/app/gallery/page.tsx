@@ -468,9 +468,10 @@ export default function GalleryPage() {
             <OptimizedImage
               src={selectedImage.src}
               alt={selectedImage.title}
-              layout="fill"
-              objectFit="contain"
-              className="rounded-lg"
+              fill={true}
+              className="rounded-lg object-contain"
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
             />
             <button
               onClick={() => setSelectedImage(null)}
