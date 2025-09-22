@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Modern Sleek Color Palette */
+  /* Enhanced Modern Color Palette - Optimized for Accessibility & Visual Hierarchy */
   --color-background: #0a0a0a;
   --color-foreground: #fafafa;
 
@@ -29,6 +29,14 @@
   --color-destructive: #ef4444;
   --color-destructive-foreground: #fafafa;
 
+  /* Enhanced Semantic Colors */
+  --color-success: #10b981;
+  --color-success-foreground: #fafafa;
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #0a0a0a;
+  --color-info: #3b82f6;
+  --color-info-foreground: #fafafa;
+
   --color-border: #27272a;
   --color-input: #18181b;
   --color-ring: #fbbf24;
@@ -50,23 +58,43 @@
   --color-sidebar-border: #27272a;
   --color-sidebar-ring: #fbbf24;
 
-  /* Premium Design System Colors */
+  /* Premium Design System Colors - Enhanced Hierarchy */
   --color-text-primary: #fafafa;
   --color-text-secondary: #d4d4d8;
   --color-text-muted: #a1a1aa;
   --color-text-subtle: #71717a;
+  --color-text-inverse: #0a0a0a;
   
+  /* Sophisticated Accent System */
   --color-accent-primary: #fbbf24;
   --color-accent-secondary: #f59e0b;
   --color-accent-tertiary: #06b6d4;
+  --color-accent-quaternary: #8b5cf6;
+  --color-accent-success: #10b981;
   
-  --color-surface-elevated: #18181b;
+  /* Enhanced Surface System */
+  --color-surface-base: #0a0a0a;
+  --color-surface-elevated: #111111;
+  --color-surface-elevated-2: #18181b;
+  --color-surface-elevated-3: #1f1f23;
   --color-surface-hover: #27272a;
   --color-surface-pressed: #3f3f46;
+  --color-surface-focus: #52525b;
   
+  /* Sophisticated Gradient System */
   --color-gradient-primary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   --color-gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-  --color-gradient-dark: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  --color-gradient-tertiary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --color-gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --color-gradient-dark: linear-gradient(135deg, #111111 0%, #18181b 100%);
+  --color-gradient-hero: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #06b6d4 100%);
+  --color-gradient-mesh: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(251, 191, 36, 0.3), transparent);
+  
+  /* Interactive State Colors */
+  --color-interactive-default: #fbbf24;
+  --color-interactive-hover: #f59e0b;
+  --color-interactive-active: #d97706;
+  --color-interactive-disabled: #71717a;
 
   /* Typography - Using system fonts for self-containment */
   --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -80,13 +108,24 @@
   --radius-xl: 1rem; /* 16px */
   --radius-2xl: 1.5rem; /* 24px */
 
-  /* Shadows */
+  /* Enhanced Shadow System */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-3xl: 0 35px 60px -12px rgb(0 0 0 / 0.3);
+  
+  /* Colored Glows */
   --shadow-glow: 0 0 20px rgb(251 191 36 / 0.15);
+  --shadow-glow-primary: 0 0 30px rgb(251 191 36 / 0.2);
+  --shadow-glow-secondary: 0 0 30px rgb(6 182 212 / 0.2);
+  --shadow-glow-success: 0 0 30px rgb(16 185 129 / 0.2);
+  --shadow-glow-purple: 0 0 30px rgb(139 92 246 / 0.2);
+  
+  /* Layered Shadows for Depth */
+  --shadow-elevated: 0 4px 16px rgb(0 0 0 / 0.12), 0 8px 32px rgb(0 0 0 / 0.08);
+  --shadow-floating: 0 8px 32px rgb(0 0 0 / 0.16), 0 16px 64px rgb(0 0 0 / 0.12);
 
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -138,28 +177,42 @@
 /* Premium Grid Pattern */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(251, 191, 36, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(251, 191, 36, 0.1) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--color-accent-primary) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent-primary) 10%, transparent) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 /* Enhanced Glass Morphism */
 .glass-morphism {
-  background: rgba(10, 10, 10, 0.25);
+  background: color-mix(in srgb, var(--color-background) 25%, transparent);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 10%, transparent);
 }
 
 /* Premium Gradient Text */
 .gradient-text-primary {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  background: var(--color-gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-secondary {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  background: var(--color-gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-tertiary {
+  background: var(--color-gradient-tertiary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-hero {
+  background: var(--color-gradient-hero);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -167,13 +220,37 @@
 
 /* Premium Hover Effects */
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgb(251 191 36 / 0.2);
+  box-shadow: var(--shadow-glow-primary);
   transform: translateY(-2px);
+  transition: all 0.3s ease-out;
+}
+
+.hover-glow-secondary:hover {
+  box-shadow: var(--shadow-glow-secondary);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-out;
+}
+
+.hover-glow-success:hover {
+  box-shadow: var(--shadow-glow-success);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-out;
+}
+
+.hover-glow-purple:hover {
+  box-shadow: var(--shadow-glow-purple);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-out;
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
   transition: transform 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
 }
 
 /* Premium Animation Classes */
@@ -392,7 +469,12 @@
   .card:hover {
     border-color: var(--color-accent-primary);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .card:hover {
+      transform: translateY(-2px);
+    }
   }
 
   .card-header {

@@ -37,34 +37,40 @@ const HeroSection = () => {
             </h1>
           </div>
           
-          <div className="animate-slide-up text-lg md:text-xl lg:text-2xl text-zinc-300 mb-8 md:mb-12 space-y-3 md:space-y-4 leading-relaxed max-w-3xl mx-auto px-4 md:px-0">
+          <div className="animate-slide-up text-lg md:text-xl lg:text-2xl text-secondary mb-8 md:mb-12 space-y-3 md:space-y-4 leading-relaxed max-w-3xl mx-auto px-4 md:px-0">
             <p className="flex items-center justify-center gap-3">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-400/20 text-amber-400">✨</span>
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 text-accent">✨</span>
               Authentic Sufi whirling &amp; traditional folk dances
             </p>
             <p className="flex items-center justify-center gap-3">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-400/20 text-amber-400">🏆</span>
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 text-accent">🏆</span>
               Award-winning artists preserving cultural heritage
             </p>
             <p className="flex items-center justify-center gap-3">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-400/20 text-amber-400">🎭</span>
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 text-accent">🎭</span>
               22+ years of breathtaking performances
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12 md:mb-20 px-4 md:px-0">
-            <Link
-              href="/services"
-              className="btn btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 min-h-[48px] text-center"
+            <Button
+              asChild
+              variant="gradient"
+              size="hero"
             >
-              Book Sufi Performance
-            </Link>
-            <Link
-              href="/gallery"
-              className="btn btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 min-h-[48px] border-zinc-600 hover:border-amber-400 text-center"
+              <Link href="/services">
+                Book Sufi Performance
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="hero"
             >
-              View Dance Gallery
-            </Link>
+              <Link href="/gallery">
+                View Dance Gallery
+              </Link>
+            </Button>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -77,7 +83,7 @@ const HeroSection = () => {
                 <div className="font-display text-4xl md:text-5xl font-bold gradient-text mb-3 transition-transform duration-300 group-hover:scale-110">
                   {stat.value}
                 </div>
-                <p className="text-base text-zinc-400 font-medium tracking-wide transition-colors duration-300 group-hover:text-zinc-300">
+                <p className="text-base text-muted font-medium tracking-wide transition-colors duration-300 group-hover:text-secondary">
                   {stat.label}
                 </p>
               </div>
