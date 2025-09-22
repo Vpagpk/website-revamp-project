@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +8,27 @@ import Navigation from "@/components/sections/navigation";
 import PerformancesSection from "@/components/sections/performances-section";
 import Footer from "@/components/sections/footer";
 import { OptimizedImage } from "@/components/ui/optimized-image";
-import { Play, Filter, Star, Award, Users, Calendar, MapPin, Phone, Mail } from 'lucide-react';
+import { Play, Filter, Star, Award, Users, Calendar, MapPin, Phone, Mail, X } from 'lucide-react';
+import Masonry from 'react-masonry-css';
+import { Input } from "@/components/ui/input";
+import { useInView } from 'react-intersection-observer';
+
+interface Photo {
+  id: number;
+  src: string;
+  category: string;
+  title: string;
+  description: string;
+}
+
+interface Video {
+  id: string;
+  thumbnail: string;
+  title: string;
+  category: string;
+  duration: string;
+  views: string;
+}
 
 const categories = [
   { id: 'all', name: 'All Performances', count: 24 },
@@ -19,7 +39,7 @@ const categories = [
   { id: 'festivals', name: 'Festivals', count: 2 }
 ];
 
-const photoGallery = [
+const photoGallery: Photo[] = [
   {
     id: 1,
     src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/hero-background-CT38UIQE-1.jpg",
@@ -64,38 +84,38 @@ const photoGallery = [
   }
 ];
 
-const videoGallery = [
+const videoGallery: Video[] = [
   {
-    id: 1,
-    thumbnail: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/maxresdefault-5.jpg",
+    id: "dQw4w9WgXcQ",
+    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
     title: "Sufi Whirling Masterpiece",
     category: "sufi",
-    duration: "8:45",
-    views: "125K"
+    duration: "3:32",
+    views: "1.5B"
   },
   {
-    id: 2,
-    thumbnail: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/maxresdefault-4.jpg",
+    id: "3tmd-ClpJxA",
+    thumbnail: "https://img.youtube.com/vi/3tmd-ClpJxA/maxresdefault.jpg",
     title: "Cultural Dance Festival",
     category: "cultural",
-    duration: "12:30",
-    views: "89K"
+    duration: "4:09",
+    views: "2.1M"
   },
   {
-    id: 3,
-    thumbnail: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/maxresdefault-8.jpg",
+    id: "l-gQLqv9f4o",
+    thumbnail: "https://img.youtube.com/vi/l-gQLqv9f4o/maxresdefault.jpg",
     title: "Wedding Dance Celebration",
     category: "wedding",
-    duration: "15:20",
-    views: "67K"
+    duration: "2:54",
+    views: "11M"
   },
   {
-    id: 4,
-    thumbnail: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/images/maxresdefault-3.jpg",
+    id: "u6VTj7LhCtE",
+    thumbnail: "https://img.youtube.com/vi/u6VTj7LhCtE/maxresdefault.jpg",
     title: "Behind the Scenes",
     category: "corporate",
-    duration: "6:15",
-    views: "45K"
+    duration: "5:58",
+    views: "3.2M"
   }
 ];
 
@@ -129,14 +149,38 @@ const achievements = [
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [visiblePhotos, setVisiblePhotos] = useState(6);
+  const [visibleVideos, setVisibleVideos] = useState(4);
 
-  const filteredPhotos = activeCategory === 'all' 
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setVisiblePhotos((prev) => prev + 6);
+      setVisibleVideos((prev) => prev + 4);
+    }
+  }, [inView]);
+
+  const filteredPhotos = (activeCategory === 'all' 
     ? photoGallery 
-    : photoGallery.filter(photo => photo.category === activeCategory);
+    : photoGallery.filter(photo => photo.category === activeCategory)
+  ).filter(photo => photo.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
-  const filteredVideos = activeCategory === 'all'
+  const filteredVideos = (activeCategory === 'all'
     ? videoGallery
-    : videoGallery.filter(video => video.category === activeCategory);
+    : videoGallery.filter(video => video.category === activeCategory)
+  ).filter(video => video.title.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -170,7 +214,7 @@ export default function GalleryPage() {
       {/* Category Filters */}
       <section className="py-12 bg-card/30">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
               <Button
                 key={category.id}
@@ -184,6 +228,15 @@ export default function GalleryPage() {
                 </Badge>
               </Button>
             ))}
+          </div>
+          <div className="max-w-md mx-auto">
+            <Input
+              type="text"
+              placeholder="Search gallery..."
+              className="w-full"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
           </div>
         </div>
       </section>
@@ -201,9 +254,17 @@ export default function GalleryPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPhotos.map((photo) => (
-              <Card key={photo.id} className="group cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-300">
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="flex w-auto -ml-8"
+            columnClassName="pl-8 bg-clip-padding"
+          >
+            {filteredPhotos.slice(0, visiblePhotos).map((photo) => (
+              <Card 
+                key={photo.id} 
+                className="group cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 mb-8"
+                onClick={() => setSelectedImage(photo)}
+              >
                 <div className="relative overflow-hidden">
                   <OptimizedImage
                     src={photo.src}
@@ -227,7 +288,8 @@ export default function GalleryPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </Masonry>
+          {visiblePhotos < filteredPhotos.length && <div ref={ref} />}
         </div>
       </section>
 
@@ -242,8 +304,12 @@ export default function GalleryPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredVideos.map((video) => (
-              <Card key={video.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300">
+            {filteredVideos.slice(0, visibleVideos).map((video) => (
+              <Card 
+                key={video.id} 
+                className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
+                onClick={() => setSelectedVideo(video)}
+              >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <OptimizedImage
                     src={video.thumbnail}
@@ -275,6 +341,7 @@ export default function GalleryPage() {
               </Card>
             ))}
           </div>
+          {visibleVideos < filteredVideos.length && <div ref={ref} />}
         </div>
       </section>
 
@@ -290,7 +357,7 @@ export default function GalleryPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {behindTheScenes.map((item) => (
-              <Card key={item.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300">
+              <Card key={item.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <OptimizedImage
                     src={item.src}
@@ -391,6 +458,53 @@ export default function GalleryPage() {
       </section>
 
       <Footer />
+
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-in fade-in-0"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
+            <OptimizedImage
+              src={selectedImage.src}
+              alt={selectedImage.title}
+              layout="fill"
+              objectFit="contain"
+              className="rounded-lg"
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-4 -right-4 text-white bg-primary rounded-full p-2 hover:bg-primary/80 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-in fade-in-0"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div className="relative w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              src={`https://www.youtube.com/embed/${selectedVideo.id}?autoplay=1`}
+              title={selectedVideo.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full rounded-lg"
+            ></iframe>
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute -top-4 -right-4 text-white bg-primary rounded-full p-2 hover:bg-primary/80 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
