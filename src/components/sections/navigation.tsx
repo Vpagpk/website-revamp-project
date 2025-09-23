@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from "@/lib/utils";
 
@@ -30,13 +31,22 @@ export default function Navigation() {
       <div className="container">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group" aria-label="VPAG Dance - Home">
-            <div className="hidden sm:block">
-              <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
-                VPAG DANCE
-              </span>
-              <p className="text-xs font-semibold text-zinc-400 tracking-widest">CULTURAL PERFORMANCE ARTS</p>
+            <div className="relative flex items-center space-x-3">
+              <Image
+                src="/vpag-logo.png"
+                alt="VPAG - Versatile Performing Art Group"
+                width={50}
+                height={50}
+                className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+              <div className="hidden sm:block">
+                <span className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
+                  VPAG
+                </span>
+                <p className="text-xs font-semibold text-zinc-400 tracking-widest">VERSATILE PERFORMING ART GROUP</p>
+              </div>
             </div>
-            <span className="sm:hidden text-xl font-extrabold tracking-tight">VPAG</span>
           </Link>
 
           <nav className="hidden items-center space-x-1 md:flex" role="navigation" aria-label="Main navigation">

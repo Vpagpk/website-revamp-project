@@ -35,17 +35,17 @@ export default function Footer() {
           
           <div className="pr-8">
             <Link href="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 p-2 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative overflow-hidden rounded-xl bg-black/20 p-2 transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/868cb7af-e9c9-4037-8fcb-8f15fbc2feb7-vpagpk-lovable-app/assets/icons/58b4bb01-c2d0-4518-83f4-27787f2cdbd6-1.png"
-                  alt="V.PAG Logo"
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 object-contain"
+                  src="/vpag-logo.png"
+                  alt="VPAG - Versatile Performing Art Group"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-display bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">V.PAG</h3>
+                <h3 className="text-xl font-bold font-display bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">VPAG</h3>
                 <p className="text-xs font-medium text-zinc-400 tracking-wide uppercase">
                   Versatile Performing Art Group
                 </p>
