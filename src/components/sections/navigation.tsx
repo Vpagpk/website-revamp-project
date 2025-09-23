@@ -30,44 +30,18 @@ export default function Navigation() {
     <header className="fixed top-0 z-50 w-full glass-effect border-b border-zinc-800/50">
       <div className="container">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center group" aria-label="VPAG Dance - Home">
-            <div className="relative flex items-center space-x-4 py-2">
-              {/* Logo with enhanced styling */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-500/20 rounded-xl blur-sm group-hover:blur-none transition-all duration-300"></div>
-                <div className="relative bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-xl p-2 border border-zinc-700/50 group-hover:border-amber-400/30 transition-all duration-300">
-                  <Image
-                    src="/vpag-logo.png"
-                    alt="VPAG - Versatile Performing Art Group"
-                    width={48}
-                    height={48}
-                    className="w-12 h-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-lg"
-                    priority
-                  />
-                </div>
-              </div>
-              
-              {/* Enhanced text branding */}
-              <div className="hidden sm:block">
-                <div className="relative">
-                  <h1 className="text-2xl font-black tracking-tight leading-none">
-                    <span className="bg-gradient-to-r from-white via-zinc-100 to-amber-100 bg-clip-text text-transparent drop-shadow-sm">
-                      VPAG
-                    </span>
-                  </h1>
-                  <p className="text-[10px] font-bold text-zinc-400 tracking-[0.2em] uppercase leading-tight mt-0.5 opacity-90">
-                    Versatile Performing Art Group
-                  </p>
-                  {/* Subtle underline accent */}
-                  <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full opacity-60 group-hover:w-full group-hover:opacity-100 transition-all duration-500"></div>
-                </div>
-              </div>
-              
-              {/* Mobile version with improved styling */}
-              <div className="sm:hidden">
-                <span className="text-xl font-black tracking-tight bg-gradient-to-r from-white to-amber-100 bg-clip-text text-transparent">
-                  VPAG
-                </span>
+          <Link href="/" className="flex items-center group" aria-label="VPAG - Versatile Performing Art Group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-500/20 rounded-xl blur-sm group-hover:blur-none transition-all duration-300"></div>
+              <div className="relative bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-xl p-2 border border-zinc-700/50 group-hover:border-amber-400/30 transition-all duration-300">
+                <Image
+                  src="/vpag-logo.png"
+                  alt="VPAG - Versatile Performing Art Group"
+                  width={48}
+                  height={48}
+                  className="w-12 h-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-lg"
+                  priority
+                />
               </div>
             </div>
           </Link>

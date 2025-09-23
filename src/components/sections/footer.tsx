@@ -34,19 +34,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 py-20">
           
           <div className="pr-8">
-            <Link href="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="relative overflow-hidden rounded-xl bg-black/20 p-2 transition-transform duration-300 group-hover:scale-105">
+            <Link href="/" className="flex items-center space-x-4 mb-6 group">
+              <div className="relative overflow-hidden rounded-xl bg-black/20 p-3 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/vpag-logo.png"
                   alt="VPAG - Versatile Performing Art Group"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain"
+                  width={64}
+                  height={64}
+                  className="w-16 h-auto object-contain"
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-display bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">VPAG</h3>
-                <p className="text-xs font-medium text-zinc-400 tracking-wide uppercase">
+                <h3 className="text-lg font-semibold font-display bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">VPAG</h3>
+                <p className="text-xs font-normal text-zinc-500 tracking-wide">
                   Versatile Performing Art Group
                 </p>
               </div>
