@@ -32,8 +32,8 @@ export default function HomePage() {
       
       {/* Enhanced hero section with premium background */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-cyan-500/5" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(251,191,36,0.1),transparent_60%)]" />
+        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,0,0,0.1),transparent_60%)]" />
         <HeroSection />
       </div>
       
@@ -81,7 +81,7 @@ export default function HomePage() {
       
       {/* Premium CTA section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-cyan-500/10" />
+        <div className="absolute inset-0 bg-black" />
         <CtaSection />
       </div>
       

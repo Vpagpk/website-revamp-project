@@ -56,7 +56,7 @@ const BrandsSection = () => {
     <section className="section bg-gradient-to-b from-zinc-950 to-black relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_100%_50%,#fbbf24,transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_100%_50%,#000000,transparent)]"></div>
       </div>
       
       <div className="container relative z-10">

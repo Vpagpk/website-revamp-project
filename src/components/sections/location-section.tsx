@@ -5,7 +5,7 @@ const LocationSection = () => {
     <section className="section bg-gradient-to-b from-zinc-950 to-black relative overflow-hidden" role="region" aria-labelledby="location-heading">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_50%,#fbbf24,transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_50%,#000000,transparent)]"></div>
       </div>
       
       <div className="container text-center relative z-10">

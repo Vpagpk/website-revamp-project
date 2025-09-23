@@ -88,7 +88,7 @@ const FaqSection = () => {
     <section className="section bg-gradient-to-b from-black to-zinc-950 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_50%,#fbbf24,transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_50%,#000000,transparent)]"></div>
       </div>
       
       <div className="container relative z-10">

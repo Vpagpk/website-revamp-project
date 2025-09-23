@@ -13,7 +13,7 @@ const AboutSection = () => {
     <section className="section bg-gradient-to-b from-zinc-950 to-black relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_0%,#fbbf24,transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_0%,#000000,transparent)]"></div>
       </div>
       
       <div className="container relative z-10">

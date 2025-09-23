@@ -48,7 +48,7 @@ export default function ServicesSection() {
     <section className="section bg-gradient-to-b from-zinc-900/50 to-black/80 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#fbbf24,transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#000000,transparent)]"></div>
       </div>
       
       <div className="container relative z-10">
