@@ -41,7 +41,9 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: [
     '*.replit.dev',
     '*.repl.co',
-    '*.kirk.replit.dev', 
+    '*.kirk.replit.dev',
+    '*.janeway.replit.dev',
+    '*.replit.app',
     'localhost',
     '127.0.0.1',
     '0.0.0.0',
