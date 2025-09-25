@@ -3,15 +3,16 @@
 ## Overview
 A production-ready Next.js 15 application with PostgreSQL database, optimized for minimal setup time and credit usage on Replit. This template is designed for instant deployment and efficient development.
 
-## Recent Import Setup (September 22, 2025)
+## Recent Import Setup (September 25, 2025)
 ✅ **Successfully imported and configured for Replit environment**
 - Frontend running on port 5000 with proper host configuration (0.0.0.0)
-- PostgreSQL database created and schema deployed successfully  
 - All dependencies installed and working correctly
+- Fixed Next.js configuration to remove static export mode
+- External image hostnames properly configured (Supabase, YouTube, Pravatar)
 - Replit proxy compatibility configured in Next.js config
 - Deployment configuration set up for autoscale
-- No TypeScript or LSP errors detected
-- Application compiled and running successfully
+- Application loading successfully (HTTP 200 responses)
+- No blocking errors detected
 
 ## ⚡ Quick Setup (Minimal Credits)
 **Automatic Setup:**
