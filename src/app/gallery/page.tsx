@@ -31,12 +31,12 @@ interface Video {
 }
 
 const categories = [
-  { id: 'all', name: 'All Performances', count: 24 },
-  { id: 'sufi', name: 'Sufi Dance', count: 8 },
-  { id: 'cultural', name: 'Cultural Shows', count: 6 },
-  { id: 'wedding', name: 'Wedding Events', count: 5 },
-  { id: 'corporate', name: 'Corporate Events', count: 3 },
-  { id: 'festivals', name: 'Festivals', count: 2 }
+  { id: 'all', name: 'All Performances', count: 26 },
+  { id: 'sufi', name: 'Sufi Dance', count: 4 },
+  { id: 'cultural', name: 'Cultural Shows', count: 11 },
+  { id: 'wedding', name: 'Wedding Events', count: 4 },
+  { id: 'corporate', name: 'Corporate Events', count: 2 },
+  { id: 'festivals', name: 'Festivals', count: 5 }
 ];
 
 const photoGallery: Photo[] = [
@@ -56,31 +56,171 @@ const photoGallery: Photo[] = [
   },
   {
     id: 3,
+    src: "/IMAGE45_1758783316691.webp",
+    category: "cultural",
+    title: "Majestic Palace Performance",
+    description: "Grand traditional dance in historic palace venue"
+  },
+  {
+    id: 7,
+    src: "/IMAGE40_1758783316683.webp",
+    category: "cultural",
+    title: "Grand Palace Performance",
+    description: "Multi-tiered traditional dance showcase in historic venue"
+  },
+  {
+    id: 8,
+    src: "/IMAGE41_1758783316684.webp",
+    category: "cultural",
+    title: "Sunset Beach Performance",
+    description: "Traditional drummers and dancers at golden hour"
+  },
+  {
+    id: 9,
+    src: "/IMAGE42_1758783316687.webp",
+    category: "festivals",
+    title: "Stadium Folk Festival",
+    description: "Colorful folk dance performance at sports venue"
+  },
+  {
+    id: 10,
+    src: "/IMAGE43_1758783316688.webp",
+    category: "corporate",
+    title: "TV Studio Production",
+    description: "Professional filming with mountain backdrop"
+  },
+  {
+    id: 11,
+    src: "/IMAGE44_1758783316690.webp",
+    category: "festivals",
+    title: "Red Fort Heritage Dance",
+    description: "Traditional performance at iconic Mughal fortress"
+  },
+  {
+    id: 12,
+    src: "/IMAGE46_1758783316692.webp",
+    category: "sufi",
+    title: "Sacred Sword Dance",
+    description: "Mystical white-robed performers with traditional swords"
+  },
+  {
+    id: 13,
+    src: "/IMAGE47_1758783316693.webp",
+    category: "sufi",
+    title: "Courtyard Whirling Ceremony",
+    description: "Spiritual whirling dance in historic palace courtyard"
+  },
+  {
+    id: 14,
+    src: "/IMAGE48_1758783316694.webp",
+    category: "cultural",
+    title: "Royal Palace Sword Dance",
+    description: "Elegant traditional sword performance in ornate palace hall"
+  },
+  {
+    id: 15,
+    src: "/IMAGE49_1758783316694.webp",
+    category: "sufi",
+    title: "Sacred Circle Dance",
+    description: "Traditional circle formation in majestic palace courtyard"
+  },
+  {
+    id: 16,
+    src: "/IMAGE30_1758783316695.webp",
+    category: "cultural",
+    title: "Ancient Egyptian Revival",
+    description: "Pharaonic-inspired dance performance on grand stage"
+  },
+  {
+    id: 17,
+    src: "/IMAGE31_1758783316695.webp",
+    category: "festivals",
+    title: "Fort Folk Celebration",
+    description: "Vibrant folk dance at historic Lahore Fort"
+  },
+  {
+    id: 18,
+    src: "/IMAGE32_1758783316696.webp",
+    category: "cultural",
+    title: "Energetic Bhangra Performance",
+    description: "High-energy Punjabi folk dance with traditional moves"
+  },
+  {
+    id: 19,
+    src: "/IMAGE33_1758783316696.webp",
+    category: "corporate",
+    title: "Live Television Performance",
+    description: "Professional broadcast production with full crew"
+  },
+  {
+    id: 20,
+    src: "/IMAGE34_1758783316697.webp",
+    category: "cultural",
+    title: "Fortress Courtyard Dance",
+    description: "Traditional performance in historic fort setting"
+  },
+  {
+    id: 21,
+    src: "/IMAGE35_1758783316698.webp",
+    category: "cultural",
+    title: "Ornate Traditional Dance",
+    description: "Elaborate costumes and intricate choreography"
+  },
+  {
+    id: 22,
+    src: "/IMAGE36_1758783316698.webp",
+    category: "festivals",
+    title: "Festive Celebration Dance",
+    description: "Joyful performance with colorful traditional attire"
+  },
+  {
+    id: 23,
+    src: "/IMAGE37_1758783316699.webp",
+    category: "cultural",
+    title: "Museum Cultural Showcase",
+    description: "Heritage performance in traditional carpet setting"
+  },
+  {
+    id: 24,
+    src: "/IMAGE38_1758783316699.webp",
+    category: "cultural",
+    title: "Historic Fort Sword Dance",
+    description: "Traditional warriors' dance in ancient fort courtyard"
+  },
+  {
+    id: 25,
+    src: "/IMAGE39_1758783316700.webp",
+    category: "festivals",
+    title: "Sacred Fire Ceremony",
+    description: "Traditional celebration with fire ritual in historic mosque"
+  },
+  {
+    id: 26,
     src: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500&h=400&fit=crop",
     category: "wedding",
     title: "Wedding Celebration Dance",
     description: "Joyful dance for wedding ceremonies"
   },
   {
-    id: 4,
+    id: 27,
     src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop",
-    category: "corporate",
-    title: "Corporate Event Performance",
-    description: "Professional cultural showcase"
+    category: "wedding",
+    title: "Mehndi Ceremony Dance",
+    description: "Traditional pre-wedding celebration"
   },
   {
-    id: 5,
+    id: 28,
     src: "https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=500&h=400&fit=crop",
-    category: "festivals",
-    title: "Festival Performance",
-    description: "Grand cultural festival showcase"
+    category: "wedding",
+    title: "Reception Entertainment",
+    description: "Grand wedding reception performance"
   },
   {
-    id: 6,
+    id: 29,
     src: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=500&h=400&fit=crop",
-    category: "sufi",
-    title: "Sufi Music & Dance",
-    description: "Traditional music with dance"
+    category: "wedding",
+    title: "Baraat Celebration",
+    description: "Groom's procession dance performance"
   }
 ];
 
@@ -200,7 +340,7 @@ export default function GalleryPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="px-4 py-2 text-primary border-primary">
                 <Play className="w-4 h-4 mr-2" />
-                24 Performance Videos
+                26 Performance Photos
               </Badge>
               <Badge variant="outline" className="px-4 py-2 text-primary border-primary">
                 <Filter className="w-4 h-4 mr-2" />
