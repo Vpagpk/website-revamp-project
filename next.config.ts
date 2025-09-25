@@ -15,10 +15,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Allow all hosts for Replit proxy
-  experimental: {
-    allowMiddlewareResponseBody: true,
-  },
 };
 
 export default nextConfig;
