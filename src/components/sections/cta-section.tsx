@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const CtaSection = () => {
   return (
-    <section className="section bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 relative overflow-hidden">
+    <section className="section bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_50%_50%,#000000,transparent)]"></div>

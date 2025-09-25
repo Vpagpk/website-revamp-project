@@ -20,7 +20,7 @@ export default function HomePage() {
       {/* Enhanced accessibility link with premium styling */}
       <a
         href="#content"
-        className="sr-only focus:not-sr-only fixed left-4 top-4 z-[100] rounded-xl border border-amber-400/30 bg-gradient-to-r from-zinc-900/90 to-zinc-800/90 px-4 py-3 text-amber-400 backdrop-blur-sm transition-all duration-300 hover:border-amber-400/50 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-zinc-900"
+        className="sr-only focus:not-sr-only fixed left-4 top-4 z-[100] rounded-xl border border-blue-400/30 bg-gradient-to-r from-zinc-900/90 to-zinc-800/90 px-4 py-3 text-blue-400 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/50 hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-zinc-900"
       >
         Skip to main content
       </a>

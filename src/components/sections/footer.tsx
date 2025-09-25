@@ -16,7 +16,7 @@ const SocialIcon = ({ href, icon: Icon, label }: { href: string; icon: React.Ele
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-800 text-zinc-400 hover:bg-amber-400 hover:text-black transition-all duration-300 hover:scale-110"
+    className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-zinc-800 text-zinc-400 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110"
   >
     <Icon className="h-5 w-5" />
   </a>
@@ -59,20 +59,20 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 font-display">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Home</Link></li>
-              <li><Link href="/about" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">About Us</Link></li>
-              <li><Link href="/services" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Our Services</Link></li>
-              <li><Link href="/gallery" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Gallery</Link></li>
+              <li><Link href="/" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Home</Link></li>
+              <li><Link href="/about" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">About Us</Link></li>
+              <li><Link href="/services" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Our Services</Link></li>
+              <li><Link href="/gallery" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Gallery</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 font-display">Our Services</h4>
             <ul className="space-y-3">
-              <li><Link href="/services" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Sufi Dance Performances</Link></li>
-              <li><Link href="/services" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Cultural Shows</Link></li>
-              <li><Link href="/services" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Wedding Events</Link></li>
-              <li><Link href="/services" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Dance Training</Link></li>
+              <li><Link href="/services" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Sufi Dance Performances</Link></li>
+              <li><Link href="/services" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Cultural Shows</Link></li>
+              <li><Link href="/services" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Wedding Events</Link></li>
+              <li><Link href="/services" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">Dance Training</Link></li>
             </ul>
           </div>
 
@@ -80,16 +80,16 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-6 font-display">Get in Touch</h4>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 group">
-                <MapPin className="h-5 w-5 text-amber-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <MapPin className="h-5 w-5 text-blue-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-zinc-400 group-hover:text-zinc-300 transition-colors duration-300">Lahore, Punjab, Pakistan</span>
               </li>
               <li className="flex items-start gap-3 group">
-                <Phone className="h-5 w-5 text-amber-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                <a href="tel:+923009402878" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300">+92 300 9402878</a>
+                <Phone className="h-5 w-5 text-blue-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <a href="tel:+923009402878" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300">+92 300 9402878</a>
               </li>
               <li className="flex items-start gap-3 group">
-                <Mail className="h-5 w-5 text-amber-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                <a href="mailto:info@vpag.pk" className="text-zinc-400 hover:text-amber-400 transition-colors duration-300">info@vpag.pk</a>
+                <Mail className="h-5 w-5 text-blue-400 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <a href="mailto:info@vpag.pk" className="text-zinc-400 hover:text-blue-400 transition-colors duration-300">info@vpag.pk</a>
               </li>
             </ul>
 
@@ -115,8 +115,8 @@ export default function Footer() {
             © 2025 V.PAG - Versatile Performing Art Group. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="text-zinc-500 hover:text-amber-400 transition-colors duration-300 text-sm">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="text-zinc-500 hover:text-amber-400 transition-colors duration-300 text-sm">Terms of Service</Link>
+            <Link href="/privacy-policy" className="text-zinc-500 hover:text-blue-400 transition-colors duration-300 text-sm">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-zinc-500 hover:text-blue-400 transition-colors duration-300 text-sm">Terms of Service</Link>
           </div>
         </div>
       </div>

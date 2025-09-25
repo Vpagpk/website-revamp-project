@@ -32,8 +32,8 @@ export default function Navigation() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center group" aria-label="VPAG - Versatile Performing Art Group">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-500/20 rounded-xl blur-sm group-hover:blur-none transition-all duration-300"></div>
-              <div className="relative bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-xl p-2 border border-zinc-700/50 group-hover:border-amber-400/30 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl blur-sm group-hover:blur-none transition-all duration-300"></div>
+              <div className="relative bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 rounded-xl p-2 border border-zinc-700/50 group-hover:border-blue-500/30 transition-all duration-300">
                 <Image
                   src="/vpag-logo.png"
                   alt="VPAG - Versatile Performing Art Group"
@@ -54,13 +54,13 @@ export default function Navigation() {
                 className={cn(
                   'relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-zinc-800/50',
                   pathname === item.href 
-                    ? 'text-amber-400 bg-zinc-800/30' 
+                    ? 'text-blue-400 bg-zinc-800/30' 
                     : 'text-zinc-300 hover:text-white'
                 )}
               >
                 {item.label}
                 {pathname === item.href && (
-                  <div className="absolute bottom-0 left-1/2 h-0.5 w-4 -translate-x-1/2 rounded-full bg-amber-400"></div>
+                  <div className="absolute bottom-0 left-1/2 h-0.5 w-4 -translate-x-1/2 rounded-full bg-blue-400"></div>
                 )}
               </Link>
             ))}
@@ -108,7 +108,7 @@ export default function Navigation() {
                 className={cn(
                   'rounded-lg px-4 py-3 text-sm font-medium transition-all duration-200',
                   pathname === item.href
-                    ? 'bg-zinc-800/50 text-amber-400 border border-zinc-700/50'
+                    ? 'bg-zinc-800/50 text-blue-400 border border-zinc-700/50'
                     : 'text-zinc-300 hover:bg-zinc-800/30 hover:text-white'
                 )}
               >
