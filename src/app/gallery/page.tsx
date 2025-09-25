@@ -31,12 +31,12 @@ interface Video {
 }
 
 const categories = [
-  { id: 'all', name: 'All Performances', count: 26 },
+  { id: 'all', name: 'All Performances', count: 34 },
   { id: 'sufi', name: 'Sufi Dance', count: 4 },
-  { id: 'cultural', name: 'Cultural Shows', count: 11 },
+  { id: 'cultural', name: 'Cultural Shows', count: 16 },
   { id: 'wedding', name: 'Wedding Events', count: 4 },
   { id: 'corporate', name: 'Corporate Events', count: 2 },
-  { id: 'festivals', name: 'Festivals', count: 5 }
+  { id: 'festivals', name: 'Festivals', count: 8 }
 ];
 
 const photoGallery: Photo[] = [
@@ -221,6 +221,62 @@ const photoGallery: Photo[] = [
     category: "wedding",
     title: "Baraat Celebration",
     description: "Groom's procession dance performance"
+  },
+  {
+    id: 30,
+    src: "/IMAGE50_1758785926741.webp",
+    category: "cultural",
+    title: "Classical Red & Gold Performance",
+    description: "Elegant traditional dance with exquisite red and gold costume"
+  },
+  {
+    id: 31,
+    src: "/IMAGE51_1758785926742.webp",
+    category: "cultural",
+    title: "Majestic Palace Sword Dance",
+    description: "Traditional sword performance in ornate palace setting"
+  },
+  {
+    id: 32,
+    src: "/IMAGE52_1758785926744.webp",
+    category: "cultural",
+    title: "Mountain Heritage Performance",
+    description: "Spectacular sword dance with Himalayan mountain backdrop"
+  },
+  {
+    id: 33,
+    src: "/IMAGE53_1758785926745.webp",
+    category: "cultural",
+    title: "Sunset Palace Dance",
+    description: "Traditional performance in warm golden palace ambiance"
+  },
+  {
+    id: 34,
+    src: "/IMAGE54_1758785926745.webp",
+    category: "cultural",
+    title: "Emerald Mystical Dance",
+    description: "Mesmerizing performance in flowing green traditional attire"
+  },
+  {
+    id: 35,
+    src: "/IMAGE55_1758785926746.webp",
+    category: "festivals",
+    title: "Grand Palace Festival",
+    description: "Vibrant outdoor festival performance with colorful turbans"
+  },
+  {
+    id: 36,
+    src: "/IMAGE56_1758785926748.webp",
+    category: "festivals",
+    title: "Grand Theater Spectacle",
+    description: "Large-scale performance with multiple dancers on grand stage"
+  },
+  {
+    id: 37,
+    src: "/IMAGE96_1758785926749.webp",
+    category: "festivals",
+    title: "Triumphant Cultural Celebration",
+    description: "Joyful festival performance with raised arms and golden turbans"
   }
 ];
 
@@ -340,7 +396,7 @@ export default function GalleryPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="px-4 py-2 text-primary border-primary">
                 <Play className="w-4 h-4 mr-2" />
-                26 Performance Photos
+                34 Performance Photos
               </Badge>
               <Badge variant="outline" className="px-4 py-2 text-primary border-primary">
                 <Filter className="w-4 h-4 mr-2" />
