@@ -43,6 +43,7 @@ const nextConfig: NextConfig = {
     '*.repl.co',
     '*.kirk.replit.dev',
     '*.janeway.replit.dev',
+    '*.pike.replit.dev',
     '*.replit.app',
     'localhost',
     '127.0.0.1',
