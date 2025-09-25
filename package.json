@@ -3,15 +3,11 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "bash ./setup.sh && next dev --hostname 0.0.0.0 --port 5000",
+        "dev": "next dev",
         "build": "next build",
-        "start": "next start --hostname 0.0.0.0 --port 5000",
-        "lint": "next lint",
-        "db:push": "drizzle-kit push --config=src/drizzle.config.ts",
-        "db:push:force": "drizzle-kit push --config=src/drizzle.config.ts --force",
-        "db:generate": "drizzle-kit generate --config=src/drizzle.config.ts",
-        "db:migrate": "drizzle-kit migrate --config=src/drizzle.config.ts",
-        "db:studio": "drizzle-kit studio --config=src/drizzle.config.ts"
+        "export": "next build",
+        "start": "next start",
+        "lint": "next lint"
     },
     "dependencies": {
         "@headlessui/react": "^2.2.7",
